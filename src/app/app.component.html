@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+    <span>{{ title }}</span>
+  </mat-toolbar>
+  
+  <mat-toolbar>
+    <button mat-button routerLink="/listar-usuarios">Listar Usuarios</button>
+    <button mat-button routerLink="/add-usuario">Agregar Usuario</button>
+  </mat-toolbar>
+  
+  <div class="toolbar-container">
+    <router-outlet></router-outlet>
+  </div>
+  

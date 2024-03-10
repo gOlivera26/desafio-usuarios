@@ -1,0 +1,26 @@
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Detalles del Usuario</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div *ngIf="usuarioDetalles && usuarioDetalles.length > 0; else noDetalles">
+        <mat-form-field>
+          <mat-label>Selecciona una materia</mat-label>
+          <mat-select [(value)]="materiaSeleccionada" (selectionChange)="seleccionarMateria($event.value)">
+            <mat-option *ngFor="let detalle of usuarioDetalles" [value]="detalle">{{ detalle.materia }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <ng-template #noDetalles>
+        <p>No se encontraron detalles para este usuario.</p>
+      </ng-template>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="cerrarComponente()">Cerrar</button>
+      <button mat-button color="accent" (click)="editarDetalle()">Editar Detalle</button>
+      <button mat-button color="success" (click)="agregarDetalle()">Agregar Detalle</button>
+      <button mat-button color="warn" (click)="eliminarDetalle()">Eliminar Detalle</button>
+    </mat-card-actions>
+  </mat-card> 
+</div>

@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Agregando Detalle</h1>
+<div mat-dialog-content [formGroup]="detalleForm" [ngClass]="{ 'formulario-invalido': detalleForm.invalid && detalleForm.touched }">
+    <mat-form-field>
+        <mat-label>Materia</mat-label>
+        <input matInput formControlName="materia">
+        <mat-error *ngIf="detalleForm.get('materia')?.invalid && detalleForm.get('materia')?.touched">
+          La materia es requerida
+        </mat-error>
+      </mat-form-field>
+      
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button (click)="onSaveClick()" [disabled]="detalleForm.invalid || saving">Agregar</button>
+</div>

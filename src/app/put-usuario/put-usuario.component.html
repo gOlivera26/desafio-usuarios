@@ -1,0 +1,43 @@
+<h1 mat-dialog-title>Editar Usuario</h1>
+<form [formGroup]="usuarioForm">
+  <div mat-dialog-content>
+    <div class="row"> 
+      <div class="col-md-6">
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Nombre:</mat-label>
+            <input matInput formControlName="nombre" placeholder="Nombre del Usuario">
+            <mat-error *ngIf="usuarioForm.get('nombre')?.invalid && usuarioForm.get('nombre')?.touched">
+              El nombre es requerido
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Correo electrónico:</mat-label>
+            <input matInput type="email" formControlName="email" placeholder="Correo electrónico del Usuario">
+            <mat-error *ngIf="usuarioForm.get('email')?.invalid && usuarioForm.get('email')?.touched">
+              El correo electrónico es requerido y debe ser válido
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label>Rol:</label>
+          <mat-radio-group formControlName="rol">
+            <mat-radio-button value="Admin">Admin</mat-radio-button>
+            <mat-radio-button value="Estudiante">Estudiante</mat-radio-button>
+          </mat-radio-group>
+          <mat-error *ngIf="usuarioForm.get('rol')?.invalid && usuarioForm.get('rol')?.touched">
+            Debes seleccionar un rol
+          </mat-error>
+        </div>        
+      </div>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="usuarioForm.value" color="primary" [disabled]="usuarioForm.invalid" (click)="actualizarUsuario()">Actualizar Usuario</button>
+    <button mat-button type="button" (click)="onNoClick()">Cancelar</button>
+  </div>  
+</form>

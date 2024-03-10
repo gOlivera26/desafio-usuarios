@@ -1,0 +1,77 @@
+{
+  "usuarios": [
+    {
+      "id": "1fa5ec9e-5c0e-4388-82f3-e36b5352bb1b",
+      "nombre": "Carlos",
+      "email": "carls@gmail.com",
+      "password": "1234",
+      "rol": "Admin"
+    },
+    {
+      "id": "6825ad6b-ddc5-448b-997a-d7a08ae63b10",
+      "nombre": "Andres",
+      "email": "andres@gmail.com",
+      "password": "1234",
+      "rol": "Estudiante"
+    },
+    {
+      "nombre": "Gomez",
+      "email": "robrt@gmail.com",
+      "rol": "Estudiante",
+      "id": "34945efa-199d-4efc-9da1-4bededbc1dc8"
+    },
+    {
+      "id": "ac8e51ca-0ad0-4c28-a725-4788d44b2e2c",
+      "nombre": "Adrian",
+      "email": "adrg@gmail.com",
+      "password": "1234",
+      "rol": "Admin"
+    },
+    {
+      "id": "ef4a5f72-f577-4ff0-a178-96593e944959",
+      "nombre": "Leo",
+      "email": "leoms@gmail.com",
+      "password": "12345",
+      "rol": "Admin"
+    },
+    {
+      "id": "d36a1cc5-0292-41b5-b690-b17d870899c4",
+      "nombre": "Angel",
+      "email": "angdm@gmail.com",
+      "password": "12345",
+      "rol": "Admin"
+    }
+  ],
+  "detallesUsuarios": [
+    {
+      "id": "4ecc0a9b-9cf4-4c69-8bcb-7afbf1989f53",
+      "idUsuario": "1fa5ec9e-5c0e-4388-82f3-e36b5352bb1b",
+      "materia": "Matematica"
+    },
+    {
+      "idUsuario": "1fa5ec9e-5c0e-4388-82f3-e36b5352bb1b",
+      "materia": "Fisica I",
+      "id": "8d17f481-c5a9-4640-aafe-0dd239a38960"
+    },
+    {
+      "id": "0227dba3-f465-41df-afa5-cb040b08416c",
+      "idUsuario": "6825ad6b-ddc5-448b-997a-d7a08ae63b10",
+      "materia": "Matematica"
+    },
+    {
+      "id": "9ce59c12-6470-4eb7-8909-648c5ec15ebe",
+      "idUsuario": "6825ad6b-ddc5-448b-997a-d7a08ae63b10",
+      "materia": "Laboratorio"
+    },
+    {
+      "id": "1d932fb0-2dcd-4847-a1a3-0234e258e687",
+      "idUsuario": "34945efa-199d-4efc-9da1-4bededbc1dc8",
+      "materia": "Educacion Fisica"
+    },
+    {
+      "id": "e62b6bd2-2556-49b6-95fb-aa8f9f695851",
+      "idUsuario": "ef4a5f72-f577-4ff0-a178-96593e944959",
+      "materia": "Educacion Fisica"
+    }
+  ]
+}
